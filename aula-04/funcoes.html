@@ -6,15 +6,18 @@
 </head>
 <body>
 	<script type="text/javascript">
-		
-	var ano = 2016;
-    var puloLinha = "<br><br><br>"
-
-	document.write("Flávio nasceu em: " + (ano - 39) + "!!");
-    document.write(puloLinha);
+	
+    function pulaLinha() {
+        document.write("<br><br><br>")
+    }
+	
+    var ano = 2016;
+	
+    document.write("Flávio nasceu em: " + (ano - 39) + "!!");
+    pulaLinha();
     document.write("Joaquim nasceu em: " + (ano - 20) + "!!");
-    document.write(puloLinha);
-
+    pulaLinha();
+    
     ano = 2017;
     
     document.write("Barney nasceu em: " + (ano - 40) + "!!");
