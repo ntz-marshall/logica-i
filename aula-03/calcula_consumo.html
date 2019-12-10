@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Álcool ou Gasolina?</title>
+</head>
+<body>
+
+	<h3>Álcool ou Gasolina?</h3>
+
+	<script type="text/javascript">
+		var tanque = 40;
+		var caminhoComGasolina = 480;
+		var caminhoComAlcool = 300;
+		var totalGas = caminhoComGasolina / tanque;
+		var totalAlc = caminhoComAlcool / tanque;
+
+		document.write("Percorri com 40L de Gasolina 480KM, meu consumo foi: " + Math.round(totalGas) + '<br>');
+		document.write("Agora, vejamos com 40L de Álcool em 300KM, meu consumo foi: " + Math.round(totalAlc));
+	</script>
+</body>
+</html>
