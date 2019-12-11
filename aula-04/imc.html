@@ -17,7 +17,18 @@
         	pulaLinha();
 		}
 
-		//forma variada de colocar mais de dois parâmetros na function
+		function calculaImc(altura, peso) {
+			var imc = peso / (altura * altura);
+			return imc;
+		}
+
+		var imcFlavio = calculaImc(1.71, 73);
+		var imcAmigo = calculaImc(1.72, 68);
+
+		mostra(imcFlavio.toFixed(2));
+		mostra(imcAmigo.toFixed(2));
+
+		/* forma variada de colocar mais de dois parâmetros na function
 
 		function calculaImc(altura1, peso1, altura2, peso2) {
 			var imc1 = peso1 / (altura1 * altura1);
@@ -29,11 +40,11 @@
 		}
 
 		calculaImc(1.71, 73, 1.72, 68);
-		
+		*/
 
 		/*
 		function calculaImc(altura, peso) {
-			var imc = peso / (altura * altura) + 1;
+			var imc = peso / (altura * altura);
     		mostra("O imc calculado é " + imc.toFixed(2));
 		}
 
