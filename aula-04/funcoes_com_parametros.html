@@ -9,23 +9,41 @@
 	
     function pulaLinha() {
 
-        document.write("<br><br><br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(butterfly) {
+
+    	document.write(butterfly);
     }
 	
+/* 
+	butterfly neste caso funciona como uma variável que recebe o valor dentro da função.
+	mostra ("valor a ser recebido pela variável butterfly");
+*/
+
+
     var ano = 2016;
 	
-    document.write("Flávio nasceu em: " + (ano - 39) + "!!");
+    // document.write("Flávio nasceu em: " + (ano - 39) + "!!");
+
+    mostra("Flávio nasceu em: " + (ano - 39) + "!!");
 
     pulaLinha();
     
-    document.write("Joaquim nasceu em: " + (ano - 20) + "!!");
+    // document.write("Joaquim nasceu em: " + (ano - 20) + "!!");
     
+    mostra("Joaquim nasceu em: " + (ano - 20) + "!!");
+
     pulaLinha();
     
     ano = 2017;
     
-    document.write("Barney nasceu em: " + (ano - 40) + "!!");
+    // document.write("Barney nasceu em: " + (ano - 40) + "!!");
     
+    mostra("Barney nasceu em: " + (ano - 40) + "!!");
     
 	</script>
 </body>
