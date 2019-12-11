@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculando IMC</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function pulaLinha() {
+        	document.write("<br>");
+        	document.write("<br>");
+		}
+
+    	function mostra(frase) {
+        	document.write(frase);
+        	pulaLinha();
+		}
+
+		function calculaImc(altura, peso) {
+			var imc = peso / (altura * altura) + 1;
+    		mostra("O imc calculado é " + imc.toFixed(2));
+		}
+
+		var pesoFlavio = 73;
+		var alturaFlavio = 1.71;
+		calculaImc(1.71, 73);
+
+		var pesoAmigo = 68;
+		var alturaAmigo = 1.72;
+		calculaImc(1.72, 68);
+
+
+		/* 
+		comandos importantes de avisos na tela by Guanabara
+		window.alert(' ')
+		window.confirm(' ')
+		window.prompt(' ')
+		N.toFixed() mostra casas decimais;
+		*/
+
+	</script>
+</body>
+</html>
