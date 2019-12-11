@@ -17,6 +17,21 @@
         	pulaLinha();
 		}
 
+		//forma variada de colocar mais de dois parâmetros na function
+
+		function calculaImc(altura1, peso1, altura2, peso2) {
+			var imc1 = peso1 / (altura1 * altura1);
+			var imc2 = peso2 / (altura2 * altura2);
+			var imcTotal = imc1 + imc2;
+    		mostra("O IMC 1 calculado é " + imc1.toFixed(2));
+    		mostra("O IMC 2 calculado é " + imc2.toFixed(2));
+    		mostra("A soma dos IMCs é: " + imcTotal.toFixed(2) + "!!");
+		}
+
+		calculaImc(1.71, 73, 1.72, 68);
+		
+
+		/*
 		function calculaImc(altura, peso) {
 			var imc = peso / (altura * altura) + 1;
     		mostra("O imc calculado é " + imc.toFixed(2));
@@ -30,6 +45,7 @@
 		var alturaAmigo = 1.72;
 		calculaImc(1.72, 68);
 
+		*/
 
 		/* 
 		comandos importantes de avisos na tela by Guanabara
