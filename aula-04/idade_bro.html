@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The Bros's Age</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function pulaLinha() {
+			document.write("<br><br>");
+		}
+
+		function mostra(bito) {
+			document.write(bito);
+			pulaLinha();
+		}
+
+		function exibeTitulo(titulo) {
+        	document.write("<h3>" + titulo + "</h3>");
+    	}
+
+    	function exibeParagrafo(paragrafo) {
+        	document.write("<p>" + paragrafo + "</p>");
+    	}
+
+    	exibeTitulo("Bem Vindos!");
+    	exibeParagrafo("Vou apresentar a diferença entre minha idade e a de meus irmãos! E são muitos! xD");
+    	
+    	var ageLivik = 29;
+    	var ageEyeG = 27;
+    	var ageLith = 21;
+    	var ageMoria = 15;
+    	var agePyken = 10;
+
+    	mostra("Do mais velho pra caçula, somos: Livik (" + ageLivik + "), eu Lith (" + ageLith + "), ËyenGrin (" + ageEyeG + "), Moria (" + ageMoria + "), e a Pyken Lith com apenas " + agePyken + " aninhos!");
+    	mostra("A diferença entre idades vem agora!");
+    	mostra("Lith x Livik: " + (ageLivik - ageLith));
+    	mostra("Lith x ËyenGrin: " + (ageEyeG - ageLith));
+    	mostra("Lith x Moria: " + (ageLith - ageMoria));
+    	mostra("Lith x Pyken Lith: " + (ageLith - agePyken));
+
+	</script>
+</body>
+</html>
