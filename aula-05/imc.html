@@ -18,6 +18,14 @@
 		}
 
 		function calculaImc(altura, peso) {
+			return peso / (altura * altura);
+		}
+
+		var totalImc = calculaImc(1.71, 73) + calculaImc(1.72, 68);
+		mostra("A soma dos imc's é " + totalImc.toFixed(2));
+
+		/* 
+		function calculaImc(altura, peso) {
 			var imc = peso / (altura * altura);
 			return imc;
 		}
@@ -27,6 +35,7 @@
 
 		mostra(imcFlavio.toFixed(2));
 		mostra(imcAmigo.toFixed(2));
+		*/
 
 		/* forma variada de colocar mais de dois parâmetros na function
 
