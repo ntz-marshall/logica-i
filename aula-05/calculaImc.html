@@ -7,17 +7,24 @@
     <body>
         <script>
             function pulaLinha() {
-        document.write("<br>");
-    }
+                document.write("<br>");
+            }
 
-    function mostra(frase) {
-        document.write(frase);
-    }
+            function mostra(frase) {
+                document.write(frase);
+            }
 
-    function calculaImc(altura, peso) {
+            function calculaImc(altura, peso) {
 
-        return peso / ( altura * altura );
-    }
+                return peso / ( altura * altura );
+            }
+
+            var imcCalculado = calculaImc(1.63, 48);
+
+            mostra("O meu IMC é " + imcCalculado.toFixed(2));
+
+            // mostra("O meu IMC é " + calculaImc(1.63, 48));
+
         </script>
     </body>
 </html>
