@@ -15,7 +15,14 @@
         	    document.write("<big>" + frase + "</big>");
         	    pulaLinha();
 		    }
+            
+            var vitorias = parseInt(prompt("Insira aqui o número de vitórias do seu time: "));
+            var empates = parseInt(prompt("Insira aqui o número de empates do seu time: "));
 
+            var pontos = vitorias * 3 + empates;
+
+            mostra("Os pontos do seu time são: " + pontos);
+            
         </script>
     </body>
 </html>
