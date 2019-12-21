@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pesquisa do Braga</title>
+    </head>
+    <body>
+            <script type="text/javascript">
+
+                    function pulaLinha() {
+                        document.write("<br><hr>");
+                    }
+                
+                    function mostra(frase) {
+                        pulaLinha();
+                        document.write("<big>" + frase + "</big>");
+                        pulaLinha();
+                    }
+                
+                    var quantidadeCarbono1 = parseInt(prompt("Quantidade de carbono substância 1"));
+                    var quantidadeCarbono2 = parseInt(prompt("Quantidade de carbono substância 2"));
+                
+                    quantidadeCarbono2 = quantidadeCarbono2 + 2;
+                
+                    if(quantidadeCarbono1 == quantidadeCarbono2) {
+                
+                        mostra("Acho que são substâncias parecidas");
+
+                    } else {
+                
+                        mostra("São substâncias bem diferentes");
+                    }
+                
+                </script>
+    </body>
+</html>
