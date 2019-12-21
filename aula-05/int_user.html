@@ -5,8 +5,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Interação com o Usuário</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'>
+    <link rel='stylesheet' type='text/css' media='screen'>
+    <script>
 
         function pulaLinha() {
             document.write("<br>");
@@ -21,7 +21,15 @@
         function calculaImc(altura, peso) {
             return peso / (altura * altura);
         }
+
+        var nome = prompt("Informe seu nome: ");
+        var alturaInf = prompt(nome + ", informe sua altura: ");
+        var pesoInf = prompt(nome + ", informe seu peso: ");
+
+        var imc = calculaImc(alturaInf, pesoInf);
         
+        document.write("O IMC de " + nome + " calculado é: " + imc.toFixed(2));
+
     </script>
 </head>
 <body>
