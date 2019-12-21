@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Melhorando meu programa IMC</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+		function pulaLinha() {
+        	document.write("<br><hr><br>");
+		}
+
+    	function mostra(frase) {
+    		pulaLinha();
+        	document.write("<big>" + frase + "</big>");
+        	pulaLinha();
+		}
+
+		function calculaImc(altura, peso) {
+			return peso / (altura * altura);
+		}
+
+        var nome = prompt("Informe o seu nome");
+        var altInf = prompt(nome + ", informe sua altura");
+        var pesoInf = prompt(nome + ", informe seu peso");
+		var totalImc = calculaImc(altInf, pesoInf);
+        
+		mostra(nome + " seu IMC é: " + totalImc.toFixed(2));
+
+        if(totalImc < 18.5) {
+            mostra("Você está abaixo do recomendado!");
+        }
+
+        if(totalImc > 35) {
+            mostra("Você está acima do recomendado!");
+        }
+        if(totalImc >= 18.5 && totalImc <= 35) {     
+            mostra("Seu IMC está Excelente!");
+        }
+
+    </script>
+</body>
+</html>
