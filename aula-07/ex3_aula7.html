@@ -6,6 +6,22 @@
     </head>
     <body>
         <script type="text/javascript">
+            function pulaLinha() {
+                document.write("<br><hr>");
+            }
+                
+            function mostra(frase) {
+                pulaLinha();
+                document.write("<big>" + frase + "</big>");
+                pulaLinha();
+            }
+            var num = 2;
+            while(num <= 100){
+                mostra("Os números pares entre 100 são:  " + num);
+                num = num + 2;
+            }
+
+            mostra("FIM")
         </script>
     </body>
 </html>
