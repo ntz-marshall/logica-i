@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Impriminto números!!</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function pulaLinha() {
+                document.write("<br><hr>");
+            }
+                
+            function mostra(frase) {
+                pulaLinha();
+                document.write("<big>" + frase + "</big>");
+                pulaLinha();
+            }
+            var num = 30;
+            while(num <= 40){
+                if(num == 33){
+                    num = num + 1;
+            }
+            if(num == 37){
+                    num = num + 1;
+            } else {
+                mostra(num);
+                num = num + 1;
+            }
+            }
+
+            mostra("FIM")
+        </script>
+    </body>
+</html>
