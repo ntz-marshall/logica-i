@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tentativa e Erro</title>
+    </head>
+    <body>
+        <script>
+
+            var loginCadastrado = "alura";
+            var senhaCadastrada = "alura321";
+        
+            var loginInformado = prompt("Informe seu login");
+            var senhaInformada = prompt("Informe sua senha");
+
+                if(loginInformado != loginCadastrado && senhaInformada != senhaCadastrada) {
+                    alert("Login ou senha inválidos. Tente novamente.");
+                    loginInformado = prompt("Informe seu login");
+                    senhaInformada = prompt("Informe sua senha");   
+                }
+                if (senhaInformada != senhaCadastrada) {
+                    alert("Senha inválida. Tente novamente.");
+                    senhaInformada = prompt("Informe sua senha");
+                } else {
+                    alert("Bem-vindo ao sistema " + loginInformado);
+                }
+                
+        </script>
+    </body>
+</html>
