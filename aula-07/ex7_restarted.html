@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tentativa e Erro</title>
+    </head>
+    <body>
+        <script>
+            function pulaLinha() {
+
+                document.write("<br><hr>");
+
+            }
+        
+            function mostra(frase) {
+        
+                document.write("<big>" + frase + "</big>");
+                pulaLinha();
+            
+            }
+
+            function errorLogin() {
+
+                alert("Login inválido. Tente novamente");
+                loginInformado = prompt("Informe seu login");
+                senhaInformada = prompt("Informe sua senha");
+
+            }
+
+            var loginCadastrado = "alura";
+            var senhaCadastrada = "alura321";
+        
+            var loginInformado = prompt("Informe seu login");
+            var senhaInformada = prompt("Informe sua senha");
+
+            var maximumAttempt = 3;
+            var currentAttempt = 1;
+
+            while (currentAttempt <= maximumAttempt) {
+
+                if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+                    alert("Bem-vindo ao sistema " + loginInformado);
+
+                    currentAttempt = maximumAttempt;
+                    // user successfully signed in
+
+                } else if (senhaCadastrada != senhaInformada) {
+
+                    errorLogin();
+
+                    if (senhaCadastrada != senhaInformada) {
+
+                        errorLogin();
+
+                    } if (senhaCadastrada != senhaInformada) {
+                        
+                        errorLogin();
+                        
+
+                    } else if (senhaCadastrada != senhaInformada) {
+
+                        errorLogin();
+
+                    } else {
+                        alert("ACESSO NEGADO!");
+                    }
+
+                } else {
+
+                    alert("ACESSO NEGADO!");
+
+                }
+
+                //go to next attempt
+                currentAttempt = currentAttempt ++;
+            }
+
+        </script>
+    </body>
+</html>
