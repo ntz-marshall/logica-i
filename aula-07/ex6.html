@@ -8,12 +8,12 @@
         <script>
 
             function pulaLinha() {
-                document.write("<br>");
+                document.write("<br><hr>");
             }
         
             function mostra(frase) {
         
-                document.write(frase);
+                document.write("<big>" + frase + "</big>");
                 pulaLinha();
             }
         
@@ -21,13 +21,12 @@
             var limite = parseInt(prompt("Qual é o ano limite?"));
         
             while(anoCopa <= limite) {
-        
                 mostra(anoCopa + " tem copa!");
+                anoCopa = anoCopa + 4;
             }
         
-            anoCopa = anoCopa + 4;
-        
             mostra("Ufa! Esses foram os anos de copa até " + limite);
+
         </script>
     </body>
 </html>
