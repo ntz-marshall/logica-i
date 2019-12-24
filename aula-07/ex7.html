@@ -6,25 +6,98 @@
     </head>
     <body>
         <script>
-
+            function pulaLinha() {
+                document.write("<br><hr>");
+            }
+        
+            function mostra(frase) {
+        
+                document.write("<big>" + frase + "</big>");
+                pulaLinha();
+            }
             var loginCadastrado = "alura";
             var senhaCadastrada = "alura321";
+
+            var tentativas = 3;
         
             var loginInformado = prompt("Informe seu login");
             var senhaInformada = prompt("Informe sua senha");
 
-                if(loginInformado != loginCadastrado && senhaInformada != senhaCadastrada) {
-                    alert("Login ou senha inválidos. Tente novamente.");
-                    loginInformado = prompt("Informe seu login");
-                    senhaInformada = prompt("Informe sua senha");   
-                }
+            if(loginInformado == loginCadastrado && senhaInformada == senhaCadastrada) {
+
+                alert("Bem-vindo ao sistema " + loginInformado);
+
+            } else if (loginInformado == loginCadastrado && senhaInformada != senhaCadastrada) {
+
+                alert("Senha inválida. " + tentativas + " tentativas restantes");
+                tentativas = tentativas - 1;
+                senhaInformada = prompt("Informe sua senha");
+
                 if (senhaInformada != senhaCadastrada) {
-                    alert("Senha inválida. Tente novamente.");
+
+                    alert("Senha inválida. " + tentativas + " tentativas restantes");
+                    tentativas = tentativas - 1;
                     senhaInformada = prompt("Informe sua senha");
+
+                } else if (senhaInformada != senhaCadastrada) {
+
+                    alert("Senha inválida. " + tentativas + " tentativas restantes");
+                    tentativas = tentativas - 1;
+                    senhaInformada = prompt("Informe sua senha");
+
+                } else if (senhaInformada != senhaCadastrada) {
+
+                    alert("Senha inválida. " + tentativas + " tentativas restantes");
+                    tentativas = tentativas - 1;
+                    senhaInformada = prompt("Informe sua senha");
+
+                    if (tentativa == 0) {
+
+                    alert("ACESSO NEGADO!")
+                    }
                 } else {
+
                     alert("Bem-vindo ao sistema " + loginInformado);
                 }
                 
+            } else if (loginInformado != loginCadastrado && senhaInformada != senhaCadastrada) {
+
+                alert("Login ou senha inválidos. " + tentativas + " tentativas restantes");
+                tentativas = tentativas - 1;
+                loginInformado = prompt("Informe seu login");
+                senhaInformada = prompt("Informe sua senha");
+
+                if (loginInformado != loginCadastrado && senhaInformada != senhaCadastrada) {
+
+                    alert("Login ou senha inválidos. " + tentativas + " tentativas restantes");
+                    tentativas = tentativas - 1;
+                    loginInformado = prompt("Informe seu login");
+                    senhaInformada = prompt("Informe sua senha");
+
+                } else if (loginInformado != loginCadastrado && senhaInformada != senhaCadastrada) {
+
+                    alert("Login ou senha inválidos. " + tentativas + " tentativas restantes");
+                    tentativas = tentativas - 1;
+                    loginInformado = prompt("Informe seu login");
+                    senhaInformada = prompt("Informe sua senha");
+
+                } else if (loginInformado != loginCadastrado && senhaInformada != senhaCadastrada) {
+                    alert("Login ou senha inválidos. " + tentativas + " tentativas restantes");
+                    tentativas = tentativas - 1;
+                    loginInformado = prompt("Informe seu login");
+                    senhaInformada = prompt("Informe sua senha");
+
+                } else {
+
+                    alert("ACESSO NEGADO!");
+                }
+                
+            } else {
+                alert("ACESSO NEGADO!")
+            }
+
+            mostra("Bem vindo " + loginInformado);
+
         </script>
     </body>
 </html>
