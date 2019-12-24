@@ -21,7 +21,7 @@
 
             function errorLogin() {
 
-                alert("Login inválido. Tente novamente");
+                alert("Login inválido. Tente novamente, tentativa número: " + currentAttempt);
                 loginInformado = prompt("Informe seu login");
                 senhaInformada = prompt("Informe sua senha");
 
@@ -45,35 +45,21 @@
                     currentAttempt = maximumAttempt;
                     // user successfully signed in
 
-                } else if (senhaCadastrada != senhaInformada) {
-
-                    errorLogin();
-
-                    if (senhaCadastrada != senhaInformada) {
-
-                        errorLogin();
-
-                    } if (senhaCadastrada != senhaInformada) {
-                        
-                        errorLogin();
-                        
-
-                    } else if (senhaCadastrada != senhaInformada) {
-
-                        errorLogin();
-
-                    } else {
-                        alert("ACESSO NEGADO!");
-                    }
-
                 } else {
 
-                    alert("ACESSO NEGADO!");
+                    if (currentAttempt == 3) {
+
+                        alert("Número permitido de tentativas ultrapassado!");
+                        alert("ACESSO NEGADO!");
+                        
+                    } else {
+                        errorLogin();
+                    }
 
                 }
 
                 //go to next attempt
-                currentAttempt = currentAttempt ++;
+                currentAttempt = currentAttempt + 1;
             }
 
         </script>
