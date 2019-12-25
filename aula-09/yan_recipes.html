@@ -5,7 +5,7 @@
     </head>
     <body>
         <script type="text/javascript">
-        
+
             var ingredientes = [];
 
             var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
@@ -15,10 +15,23 @@
             while( contador <= quantidade) {
 
                 var ingrediente = prompt("Informe o ingrediente " + contador);
+                var find = false;
 
-                ingredientes.push(ingrediente);
+                for (var position = 0; position < ingredientes.length; position++) {
+                            
+                    if (ingredientes[position] == ingrediente) {
 
-                contador++;
+                        find = true;
+                        break;
+
+                    }
+
+                }
+                if (find == false) {
+                    ingredientes.push(ingrediente);
+                    contador++;
+                }
+                
             }
 
             console.log(ingredientes);
