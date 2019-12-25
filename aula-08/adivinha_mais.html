@@ -6,7 +6,30 @@
     <body>
         <input/>
         <button>Compare to my little secret</button>
+
         <script type="text/javascript">
+            
+            var secret = Math.round(Math.random() * 10);
+            var input = document.querySelector("input");
+            //querySelector puxa a informação da tag no mundo html para dentro da var no mundo JS para que se possa utilizar dela
+            input.focus();
+
+            function check() {
+
+                if (input.value == secret) {
+                    alert("Você ACERTOU!!");
+                } else {
+                    alert("Você ERROU!!!!!!!!!!");
+                }
+                input.value = "";
+                //retorna uma string vazia para caixa de entrada limpando-a para uma nova tentativa
+                input.focus();
+                //dá foco na caixa de entrada
+            }
+            
+            var button = document.querySelector("button");
+            button.onclick = check;
+            // código da function salvo dentro de onclick para ser usado somente ao clicar no button
 
         </script>
     </body>
