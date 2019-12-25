@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabuada</title>
+    </head>
+    <body>
+        <script>
+            function pulaLinha() {
+
+                document.write("<br><hr>");
+
+            }
+        
+            function mostra(frase) {
+        
+                document.write("<big>" + frase + "</big>");
+                pulaLinha();
+            
+            }
+
+            var i = 0;
+
+            while (i <= 10) {
+                mostra("O resultado é " + (2 * i));
+                i = i + 1;
+            }
+
+            mostra("FIM!");
+
+           /* for( var i = 0; i <= 10; i++ ) {
+                mostra( "O resultado é " + (2 * i) );
+            }
+
+            for (var mult = 1; mult <= 10; mult++) {
+                mostra(7 * mult);                
+            }
+
+            */ 
+        </script>
+    </body>
+</html>
