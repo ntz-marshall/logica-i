@@ -8,43 +8,72 @@
         <button>Compare to my little secret</button>
 
         <script type="text/javascript">
+            function draw() {
+                
+                return Math.round(Math.random() * 10);
             
-            var secret1 = Math.round(Math.random() * 10);
-            var secret2 = Math.round(Math.random() * 10);
-            var secret3 = Math.round(Math.random() * 10);
+            }
+
+            function drawNum(amount) {
+                
+                var secrets = [];
+                var num = 1;
+
+                while (num <= amount) {
+                    
+                    var drawNum = draw();
+
+                    if (drawNum != 0) {
+                        
+                        var find = false;
+
+                        for (var position = 0; position < secrets.length; position++) {
+                            
+                            if (secrets[position] == drawNum) {
+
+                                find = true;
+                                break;
+
+                            }
+
+                        }
+                        
+                        if (find == false) {
+
+                            secrets.push(drawNum);
+                            num++;
+
+                        }   
+                    }
+                    
+                }
+
+                return secrets;
+            }
+            
+            console.log(secrets);
+            // mostra no console o que acontece na function
+
+            var secrets = drawNum(5);
 
             var input = document.querySelector("input");
 
             input.focus();
 
             function check() {
+                var find = false;
+                for (var position = 0; position < secrets.length; position++) {
 
-                if (input.value == secret1) {
+                    if (input.value == secrets[position]) {
 
-                    alert("Você ACERTOU!");
-
-                } else {
-
-                    alert("Você ERROU!");
-                    
+                        alert("Você ACERTOU!");
+                        find = true;
+                        break;
+                    }
                 }
-                if (input.value == secret2) {
 
-                    alert("Você ACERTOU!");
-
-                } else {
-
+                if (find == false) {
                     alert("Você ERROU!");
-
-                }
-                if (input.value == secret3) {
-
-                    alert("Você ACERTOU!");
-
-                } else {
-
-                    alert("Você ERROU!");
-
                 }
 
                 input.value = "";
