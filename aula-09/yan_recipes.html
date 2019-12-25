@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Yan Recipes</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        
+            var ingredientes = [];
+
+            var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+
+            var contador = 1;
+
+            while( contador <= quantidade) {
+
+                var ingrediente = prompt("Informe o ingrediente " + contador);
+
+                ingredientes.push(ingrediente);
+
+                contador++;
+            }
+
+            console.log(ingredientes);
+
+        </script>
+    </body>
+</html>
