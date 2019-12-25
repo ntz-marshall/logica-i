@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Compare to my little secret</title>
+    </head>
+    <body>
+        <input/>
+        <button>Compare to my little secret</button>
+
+        <script type="text/javascript">
+            
+            var secret1 = Math.round(Math.random() * 10);
+            var secret2 = Math.round(Math.random() * 10);
+            var secret3 = Math.round(Math.random() * 10);
+
+            var input = document.querySelector("input");
+
+            input.focus();
+
+            function check() {
+
+                if (input.value == secret1) {
+
+                    alert("Você ACERTOU!");
+
+                } else {
+
+                    alert("Você ERROU!");
+                    
+                }
+                if (input.value == secret2) {
+
+                    alert("Você ACERTOU!");
+
+                } else {
+
+                    alert("Você ERROU!");
+
+                }
+                if (input.value == secret3) {
+
+                    alert("Você ACERTOU!");
+
+                } else {
+
+                    alert("Você ERROU!");
+
+                }
+
+                input.value = "";
+                input.focus();
+            }
+            
+            var button = document.querySelector("button");
+            button.onclick = check;
+            
+        </script>
+    </body>
+</html>
