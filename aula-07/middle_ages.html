@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Middle Age</title> 
+    </head>
+    <body>
+
+        <script>
+
+            function br() {
+                document.write("<br><hr>")
+            }
+
+            function print(talk) {
+                document.write(talk);
+                br();
+            }
+            
+            var members = parseInt(prompt("Quantos membros tem na sua família?"));
+            var num = 1;
+            var totalAges = 0;
+
+            while (num <= members) {
+                
+                var age = parseInt(prompt("Informe a idade do famíliar:"));
+                totalAges = totalAges + age;
+                num++;
+
+            }
+
+            var middle = totalAges/members;
+            
+            print("A soma das idades é: " + totalAges.toFixed(2));
+            print("A média das idade é: " + middle.toFixed(2));
+            print("FIM");
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jogo de Adivinhação</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function pulaLinha() {
+                document.write("<br><hr><br>");
+            }
+
+            function mostra(frase) {
+                pulaLinha();
+                document.write("<big>" + frase + "</big>");
+                pulaLinha();
+            }
+
+            var numeroPensado = Math.round(Math.random() * 10);
+            var attempts = 1;
+
+            while (attempts <= 3) {
+
+                var chute = parseInt(prompt("Digite seu chute!"));
+
+                if(chute == numeroPensado){
+                    alert("Você ACERTOU! O número pensado era " + numeroPensado);
+                    break;
+
+                } else {
+                    alert("Você ERROU!");
+                }
+
+                attempts++;
+            }
+
+        </script>
+    </body>
+</html>

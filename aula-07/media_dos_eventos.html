@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Média Eventos</title>
+    </head>
+    <body>
+        <script>
+
+            function br() {
+
+                document.write("<br><hr>");
+            }
+
+            function print(talk) {
+
+                document.write("<big>" + talk + "</big>");
+                br();
+            }
+
+            var totalDeEventos = parseInt(prompt("Informe o total de eventos"));
+            var totalGastoComEventos = 0;
+            var contador = 1;
+
+            while(contador <= totalDeEventos) {
+
+                var gasto = parseFloat(prompt("Informe total gasto com evento"));
+                totalGastoComEventos = totalGastoComEventos + gasto;
+                contador++;
+
+            }
+
+            var media = totalGastoComEventos / totalDeEventos;
+
+            print("A soma dos gastos é: " + totalGastoComEventos.toFixed(2));
+            print("A média de gastos é: " + media.toFixed(2));
+            print("FIM");
+
+        </script>
+    </body>
+</html>
